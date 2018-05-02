@@ -1,0 +1,72 @@
+@import 'setup';
+@import 'typography';
+@import 'utils';
+
+// $ronchi: #f7c248;
+// $valencia: #da5257;
+// $cardinal: #d4233e;
+// $malibu: #81cbf5;
+// $jungle-mist: #b7cbd0;
+// $bleu-de-france: #3491dd;
+// $eclipse: #2d181b;
+// $dutch-white: #efdbbd;
+// $hero: 'Varela Round', sans-serif;
+// $mainText: 'Montserrat', sans-serif;
+
+// GLOBAL STYLES
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: url('../assets/funky-lines.png');
+    color: $bleu-de-france;
+    a {
+        text-decoration: none;
+    }
+    h1 {
+        color: $eclipse;
+    }
+}
+.wrapper {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+header,
+main,
+footer {
+    background: white;
+    padding: 3%;
+    box-shadow: 5px 5px  $ronchi;
+}
+
+
+// HEADER STYLES
+header {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top: 5px solid $malibu;
+    border-left:5px solid $malibu;
+    border-right: 5px solid $malibu;
+    margin-top: 5%;
+    text-align: center;
+}
+
+// MAIN STYLES
+    main {
+        border-left:5px solid $malibu;
+        border-right: 5px solid $malibu;
+    }
+    //FORM STYLES
+
+// FOOTER STYLES    
+
+footer {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-left:5px solid $malibu;
+    border-right:5px solid $malibu;
+    border-bottom: 5px solid $malibu;
+    margin-bottom: 5%;
+}

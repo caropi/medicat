@@ -1,0 +1,11 @@
+$hero: 'Varela Round', sans-serif;
+$mainText: 'Montserrat', sans-serif;
+
+body {
+    font-family: $mainText;
+}
+
+h1 {
+    font-family: $hero;
+    font-size: 8rem;
+}
