@@ -124,7 +124,8 @@ body {
 
 h1 {
   font-family: "Varela Round", sans-serif;
-  font-size: 8rem; }
+  font-size: 8rem;
+  margin: 0; }
 
 html {
   font-size: 62.5%; }
@@ -135,7 +136,8 @@ body {
   body a {
     text-decoration: none; }
   body h1 {
-    color: #2d181b; }
+    color: #341F20;
+    text-shadow: 3px 3px #efdbbd; }
 
 .wrapper {
   max-width: 70%;
@@ -158,10 +160,34 @@ header {
   border-right: 5px solid #81cbf5;
   margin-top: 5%;
   text-align: center; }
+  header img {
+    width: 10%; }
 
 main {
   border-left: 5px solid #81cbf5;
   border-right: 5px solid #81cbf5; }
+
+.question-left,
+.question-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 70%; }
+
+a.btn-primary {
+  padding: 1% 5%;
+  background: #d4233e;
+  color: white;
+  -webkit-box-shadow: 5px 4px #da5257;
+  box-shadow: 5px 4px #da5257;
+  border-radius: 10px;
+  text-align: center;
+  margin: 5% auto;
+  display: inline-block; }
 
 footer {
   border-bottom-left-radius: 30px;

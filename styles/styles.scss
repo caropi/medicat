@@ -25,7 +25,8 @@ body {
         text-decoration: none;
     }
     h1 {
-        color: $eclipse;
+        color: $cocoabrown;
+        text-shadow: 3px 3px $dutch-white;
     }
 }
 .wrapper {
@@ -51,6 +52,9 @@ header {
     border-right: 5px solid $malibu;
     margin-top: 5%;
     text-align: center;
+    img {
+        width:10%;
+    }
 }
 
 // MAIN STYLES
@@ -59,7 +63,23 @@ header {
         border-right: 5px solid $malibu;
     }
     //FORM STYLES
+    .question-left,
+    .question-right {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
 
+    a.btn-primary {
+        padding: 1% 5%;
+        background: $cardinal;
+        color: white;
+        box-shadow: 5px 4px $valencia;
+        border-radius: 10px;
+        text-align: center;
+        margin: 5% auto;
+        display: inline-block;
+    }
 // FOOTER STYLES    
 
 footer {
