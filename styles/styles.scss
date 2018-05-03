@@ -28,6 +28,9 @@ body {
         color: $cocoabrown;
         text-shadow: 3px 3px $dutch-white;
     }
+    input {
+        visibility: hidden;
+    }
 }
 .wrapper {
     max-width: 70%;

@@ -8,31 +8,35 @@ var initialScore = {
 }
 //Set up for result to be display to user
 const resultCat = {
-  drivingCat: {
-    name: "",
-    description: "",
-    image: "/assets/results/result1.gif"
-  },
-  spaCat: {
-    name: "",
-    description: "",
-    image: "/assets/results/result2.gif"
-  },
-  helicopterCat: {
-    name: "",
-    description: "",
-    image: "/assets/results/result3.gif"
-  },
-  beachCat: {
-    name: "",
-    description: "",
-    image: "/assets/results/result4.gif"
-  },
-  marthaStewartCat: {
-    name: "",
-    description: "",
-    image: "/assets/results/result5.gif"
-  }
+    marthaStewartCat: {
+        name: "It's always a good thing when you're with Martha Stewart Cat.",
+        description: "&quot;I catnap now and then, but I think while I nap, so it's not a waste of time.&quot; <em>Martha Stewart</em>.</br> Feeling stressed out and disorganized? Martha Stewart Cat will work fast to push anything you don't need in your life off your desk. You didn't need that phone. It's in the trash bin now, foget it. That succulent? Nope, don't need that where we're going. Shh, go to sleep now, Martha Stewart Cat will have this all cleaned by the time you wake up.",
+        image: "assets/results/result5.gif"
+    },
+
+    drivingCat: {
+        name: "Let Taxi Cat take you places",
+        description: "This cat could bring you to the hospital, your yoga class, or to the middle of nowhere and leave you with a cellphone at 5% battery. Whatever Taxi Cat does, Taxi Cat is just trying to drive into your heart.",
+        image: "assets/results/result1.gif"
+    },
+
+    helicopterCat: {
+        name: "Helicopter Cat, we have lift-off",
+        description: "For the thrill seekers. This cat will not make uncomfortable eye contact with you, it isn't going to try to change your life. Just sit down and regard Helicopter Cat in all of it's levitating glory. Please enjoy your time with Helicopter Cat with Beastie Boys 'Sabotage' playing on repeat.",
+        image: "assets/results/result3.gif"
+    },
+
+    beachCat: {
+        name: "It's spicy outside, get outside and spend your day with Beach Cat",
+        description: "Beach Cat might play volleyball with you if that's what your into. Other activities also include: splashing in the water in slow motion like you're in a film flirting with eachother, playing breaking watermelons on a beach (that's a thing), building sandcastles, and more. Beach Cat will not sun bathe with you. Instead Beach Cat will always remind you to wear SPF.",
+        image: "assets/results/result4.gif"
+    },
+
+    spaCat: {
+        name: "Treat yo'self and spend the day with Spa Cat",
+        description: "Spa Cat ensures that you don't waste any time going from sour face to Beyonce. You're already probably wasting a lot of time reading this when you should be booking some time at the Old Mill Spa with Spa Cat. <em>Please note:</em> MediCAT is not responsible for excess money spent with Spa Cat or medical procedures done while under the influence of Spa Cat.",
+        image: "assets/results/result2.gif"
+    }
 }
 $(function(){
     //Pseudo-coding...
@@ -43,13 +47,47 @@ $(function(){
     $('form').on('submit', function(e){
         e.preventDefault();
         //first get the variables and assign them a val if they're checked
-        const feeling = $('input[name=question1]:checked').val();
-        const maladie = $('input[name=question2]:checked').val();
-        const cure = $('input[name=question3]:checked').val(); 
-        const idealCat = $('input[name=question4]:checked').val();
-        console.log(feeling);
-    })
+        const feeling = Number($('input[name=question1]:checked').val());
+        const maladie = Number($('input[name=question2]:checked').val());
+        const cure = Number($('input[name=question3]:checked').val()); 
+        const idealCat = Number($('input[name=question4]:checked').val());
+        //add up total form - all of the answers (add values)
+        const answerTotalValues = feeling + maladie + cure + idealCat;
+        //check what the total is and make a decision on what cat users should get 
+        console.log(answerTotalValues);
+
+        //if answer to values is greater than or equal to 1 && less than or equal to for else if
+        // 1-4 = marthaStewartCat
+        // 5-8 = helicopterCat
+        // 9-12 = drivingCat
+        // 13-16 = beachCat
+        // 17-20 = spaCat
+        //grab the results container and call the empty method called empty - put this at the beginning, if it's at the end you won't see any results!
+        $('.results').empty();
+        if (answerTotalValues >= 1 && answerTotalValues <= 4) {
+            $('.results').append(`<h2>${resultCat.marthaStewartCat.name}</h2>
+            <p>${resultCat.marthaStewartCat.description}</p>
+            <img src="${resultCat.marthaStewartCat.image}">`);
+        } else if (answerTotalValues >=5 && answerTotalValues <=8) {
+            $('.results').append(`<h2>${resultCat.helicopterCat.name}</h2>
+            <p>${resultCat.helicopterCat.description}</p>
+            <img src="${resultCat.helicopterCat.image}">`);
+        } else if (answerTotalValues >=9 && answerTotalValues <=12) {
+            $('.results').append(`<h2>${resultCat.drivingCat.name}</h2>
+            <p>${resultCat.drivingCat.description}</p>
+            <img src="${resultCat.drivingCat.image}">`);
+        } else if (answerTotalValues >=13 && answerTotalValues <=16) {
+            $('.results').append(`<h2>${resultCat.beachCat.name}</h2>
+            <p>${resultCat.beachCat.description}</p>
+            <img src="${resultCat.beachCat.image}">`);
+        } else if (answerTotalValues >=17 && answerTotalValues <=20) {
+            $('.results').append(`<h2>${resultCat.spaCat.name}</h2>
+            <p>${resultCat.spaCat.description}</p>
+            <img src="${resultCat.spaCat.image}">`);
+        };
+        
+    }) //end of form function 
 
 
 
-})
+}) //end of document ready
