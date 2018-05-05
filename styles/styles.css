@@ -283,15 +283,16 @@ form {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    border-bottom: 3px solid transparent;
     -webkit-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
-    transition: 0.3s all ease; }
+    transition: 0.3s all ease;
+    border-bottom: 3px solid transparent;
+    position: relative; }
+  form input[type=radio] + label:hover {
+    text-decoration: underline; }
   form input[type=radio]:checked + label {
     background: url("../assets/paw.svg") left top no-repeat;
     background-size: 30px; }
-  form label:hover {
-    border-bottom: 3px solid #efdbbd; }
   form h3 {
     font-size: 3rem;
     margin: 1% 0; }
@@ -328,16 +329,36 @@ form {
     width: 50%;
     height: auto; }
 
-a.btn-primary {
-  padding: 1% 5%;
+input.btn-primary {
+  padding: 2% 5%;
+  margin-top: 3%;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border: none;
   background: #d4233e;
   color: white;
-  -webkit-box-shadow: 5px 4px #da5257;
-  box-shadow: 5px 4px #da5257;
-  border-radius: 10px;
+  border-radius: 20px;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: inline-block;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease; }
+
+input.btn-primary:hover {
+  -webkit-box-shadow: 8px 8px #e37c80;
+  box-shadow: 8px 8px #e37c80; }
+
+.results {
   text-align: center;
+  width: 80%;
   margin: 5% auto;
-  display: inline-block; }
+  font-size: 1.6rem; }
+  .results i {
+    font-size: 3rem;
+    color: #d4233e; }
+  .results img {
+    border-radius: 20px; }
 
 footer {
   border-bottom-left-radius: 30px;
@@ -345,4 +366,9 @@ footer {
   border-left: 5px solid #81cbf5;
   border-right: 5px solid #81cbf5;
   border-bottom: 5px solid #81cbf5;
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+  text-align: center; }
+  footer img {
+    width: 100px; }
+  footer h4 {
+    margin-top: 0; }

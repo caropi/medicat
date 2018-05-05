@@ -181,17 +181,18 @@ header {
             line-height: 2;
             display: flex;
             justify-content: flex-start;
-            border-bottom: 3px solid transparent;
             transition: 0.3s all ease;
+            border-bottom: 3px solid transparent;
+            position: relative;
+        }
+        input[type=radio] + label:hover{
+            text-decoration: underline;
         }
         input[type=radio]:checked + label {
             background: url('../assets/paw.svg') left top no-repeat;
             background-size: 30px;
         }
         
-        label:hover {
-            border-bottom: 3px solid $dutch-white;
-        }
         h3 {
             font-size: 3rem;
             margin: 1% 0;
@@ -220,17 +221,35 @@ header {
         }
     }
 
-
-
-    a.btn-primary {
-        padding: 1% 5%;
+    input.btn-primary {
+        padding: 2% 5%;
+        margin-top: 3%;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        border: none;
         background: $cardinal;
         color: white;
-        box-shadow: 5px 4px $valencia;
-        border-radius: 10px;
-        text-align: center;
-        margin: 5% auto;
+        border-radius: 20px;
+        align-self: center;
         display: inline-block;
+        transition: 0.3s all ease;
+    }
+    input.btn-primary:hover {
+        box-shadow: 8px 8px lighten($valencia, 10%);
+    }
+
+    .results {
+        text-align: center;
+        width: 80%;
+        margin: 5% auto;
+        font-size: 1.6rem;
+        i {
+            font-size: 3rem;
+            color: $cardinal;
+        }
+        img {
+            border-radius: 20px;
+        }
     }
 // FOOTER STYLES    
 
@@ -241,4 +260,11 @@ footer {
     border-right:5px solid $malibu;
     border-bottom: 5px solid $malibu;
     margin-bottom: 5%;
+    text-align: center;
+    img {
+        width: 100px;
+    }
+    h4 {
+        margin-top: 0;
+    }
 }

@@ -81,27 +81,37 @@ $(function(){
             $('.results').append(`<h2>${resultCat.marthaStewartCat.name}</h2>
             <p>${resultCat.marthaStewartCat.description}</p>
             <img src="${resultCat.marthaStewartCat.image}">
-            <p><a href="https://twitter.com/intent/tweet?text=%20${resultCat.tweetMsg.message}%20${resultCat.marthaStewartCat.tweetThat}" target="_blank"><i class="fab fa-twitter"></i></a></p>`);
+            <p>
+            <a href="https://twitter.com/intent/tweet?text=%20${resultCat.tweetMsg.message}%20${resultCat.marthaStewartCat.tweetThat}" target="_blank"><i class="fab fa-twitter"></i></a>
+            </p>`);
         } else if (answerTotalValues >=5 && answerTotalValues <=8) {
             $('.results').append(`<h2>${resultCat.helicopterCat.name}</h2>
-            <p>${resultCat.helicopterCat.description}</p>
             <img src="${resultCat.helicopterCat.image}">
-            <p><a href="https://twitter.com/intent/tweet?text=%20${resultCat.tweetMsg.message}%20${resultCat.helicopterCat.tweetThat}" target="_blank"><i class="fab fa-twitter"></i></a></p>`);
+            <p>${resultCat.helicopterCat.description}</p>
+            <p>
+                <a href="https://twitter.com/intent/tweet?text=%20${resultCat.tweetMsg.message}%20${resultCat.helicopterCat.tweetThat}" target="_blank"><i class="fab fa-twitter"></i></a>
+            </p>`);
         } else if (answerTotalValues >=9 && answerTotalValues <=12) {
             $('.results').append(`<h2>${resultCat.drivingCat.name}</h2>
-            <p>${resultCat.drivingCat.description}</p>
             <img src="${resultCat.drivingCat.image}">
-            <p><a href="https://twitter.com/intent/tweet?text=%20${resultCat.tweetMsg.message}%20${resultCat.drivingCat.tweetThat}" target="_blank"><i class="fab fa-twitter"></i></a></p>`);
+            <p>${resultCat.drivingCat.description}</p>
+            <p>
+            <a href="https://twitter.com/intent/tweet?text=%20${resultCat.tweetMsg.message}%20${resultCat.drivingCat.tweetThat}" target="_blank"><i class="fab fa-twitter"></i></a>
+            </p>`);
         } else if (answerTotalValues >=13 && answerTotalValues <=16) {
             $('.results').append(`<h2>${resultCat.beachCat.name}</h2>
-            <p>${resultCat.beachCat.description}</p>
             <img src="${resultCat.beachCat.image}">
-            <p><a href="https://twitter.com/intent/tweet?text=%20${resultCat.tweetMsg.message}%20${resultCat.beachCat.tweetThat}" target="_blank"><i class="fab fa-twitter"></i></a></p>`);
+            <p>${resultCat.beachCat.description}</p>
+            <p>
+            <a href="https://twitter.com/intent/tweet?text=%20${resultCat.tweetMsg.message}%20${resultCat.beachCat.tweetThat}" target="_blank"><i class="fab fa-twitter"></i></a>
+            </p>`);
         } else if (answerTotalValues >=17 && answerTotalValues <=20) {
             $('.results').append(`<h2>${resultCat.spaCat.name}</h2>
-            <p>${resultCat.spaCat.description}</p>
             <img src="${resultCat.spaCat.image}">
-            <p><a href="https://twitter.com/intent/tweet?text=%20${resultCat.tweetMsg.message}%20${resultCat.spaCat.tweetThat}" target="_blank"><i class="fab fa-twitter"></i></a></p>`);
+            <p>${resultCat.spaCat.description}</p>
+            <p>
+            <a href="https://twitter.com/intent/tweet?text=%20${resultCat.tweetMsg.message}%20${resultCat.spaCat.tweetThat}" target="_blank"><i class="fab fa-twitter"></i></a>
+            </p>`);
         };
         
     }) //end of form function 
