@@ -28,15 +28,17 @@ body {
         color: $cocoabrown;
         text-shadow: 3px 3px $dutch-white;
     }
-    input[type=radio] {
-        // visibility: hidden;
-        // position: absolute;
-    }
 }
 .wrapper {
     max-width: 70%;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        max-width: 85%;
+    }
 }
 header,
 main,
@@ -135,9 +137,29 @@ header {
     margin-top: 5%;
     padding-bottom: .5%;
     text-align: center;
+
     img {
         width:150px;
         height: auto;
+    }
+    @media (max-width:843px) {
+        img{
+            width: 75px;
+            height: auto;
+            transform: rotate(-30deg);
+            position: absolute;
+            right: 95%;
+
+        }
+        img:last-child {
+            transform: rotate(30deg);
+            left: 95%;
+        }
+    }
+    @media (max-width:550px) {
+        img {
+            bottom: 10%;
+        }
     }
     .hero-row {
         position: relative;
@@ -146,6 +168,8 @@ header {
         justify-content: space-around;
         align-items: center;
         z-index: 1; 
+        width: 80%;
+        margin: 0 auto;
         h1 {
             position: relative;
        }
@@ -156,6 +180,12 @@ header {
             z-index: -1;
             left: 45%;
             top: 15%;
+        }
+        @media (max-width: 843px){
+            flex-direction: column;
+            .circle {
+                display: none;
+            }
         }
 
     }
@@ -208,10 +238,6 @@ header {
         align-items: center;
         text-align: left;
         width: 100%;
-        img {
-            width: 20%;
-            height: auto;
-        }
         .question-left,
         .question-right {
             display: flex;
@@ -219,6 +245,25 @@ header {
             width: 50%;
             height: auto;
         }
+        @media (max-width: 600px) {
+            flex-direction: column;
+            .question-left,
+            .question-right {
+                order: 2;
+                width: 100%;
+                h3 {
+                    text-align: center;
+                }
+            }
+            img {
+                order: 1;
+            }
+        }
+        img {
+            width: 20%;
+            height: auto;
+        }
+
     }
 
     input.btn-primary {
@@ -233,6 +278,10 @@ header {
         align-self: center;
         display: inline-block;
         transition: 0.3s all ease;
+        @media (max-width: 409px) {
+            width: 50%;
+            white-space: normal;
+        }
     }
     input.btn-primary:hover {
         box-shadow: 8px 8px lighten($valencia, 10%);
@@ -241,14 +290,28 @@ header {
     .results {
         text-align: center;
         width: 80%;
-        margin: 5% auto;
+        margin: 1% auto;
         font-size: 1.6rem;
+        h2 {
+            font-family: $hero;
+            color: $cocoabrown;
+            font-size: 3rem;
+            text-shadow: 2px 2px $dutch-white;
+
+        }
         i {
             font-size: 3rem;
             color: $cardinal;
+            transition: 0.3s all ease;
+        }
+        i:hover {
+            color: $ronchi;
         }
         img {
             border-radius: 20px;
+            @media (max-width: 660px){
+                width: 100%;
+            }
         }
     }
 // FOOTER STYLES    
@@ -266,5 +329,12 @@ footer {
     }
     h4 {
         margin-top: 0;
+    }
+    a {
+        color: lighten($bleu-de-france, 20%);
+        font-weight: bolder;
+    }
+    a:hover {
+        color: darken($bleu-de-france, 35%);
     }
 }
