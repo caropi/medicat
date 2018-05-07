@@ -180,14 +180,10 @@ header {
             z-index: -1;
             left: 45%;
             top: 15%;
-        }
-        @media (max-width: 843px){
-            flex-direction: column;
-            .circle {
-                display: none;
+            @media (max-width: 1044px) {
+                display: none
             }
         }
-
     }
 }
 
