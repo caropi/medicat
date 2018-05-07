@@ -225,7 +225,7 @@ header {
         
         h3 {
             font-size: 3rem;
-            margin: 1% 0;
+            margin: 20px 0;
         }
         label {
             font-size: 1.5rem;
@@ -244,6 +244,7 @@ header {
             flex-direction: column;
             width: 50%;
             height: auto;
+            margin-bottom: 20px;
         }
         @media (max-width: 600px) {
             flex-direction: column;
@@ -267,8 +268,8 @@ header {
     }
 
     input.btn-primary {
-        padding: 2% 5%;
-        margin-top: 3%;
+        padding: 20px 5%;
+        margin-top: 50px;
         font-size: 1.6rem;
         text-transform: uppercase;
         border: none;
@@ -290,7 +291,7 @@ header {
     .results {
         text-align: center;
         width: 80%;
-        margin: 1% auto;
+        margin: 50px auto;
         font-size: 1.6rem;
         h2 {
             font-family: $hero;
