@@ -33,9 +33,9 @@ const resultCat = {
   },
 
   beachCat: {
-    name: "It's spicy outside, get outside and spend your day with Beach Cat",
+    name: "It's spicy outside, so bask in the warmth of the day with Beach Cat",
     description:
-      "Beach Cat might play volleyball with you if that's what your into. Other activities also include: splashing in the water in slow motion like you're in a film flirting with eachother,  breaking watermelons on a beach (that's a thing), building sandcastles, and more. Beach Cat will not sun bathe with you, but Beach Cat will always remind you to wear SPF.",
+      "Beach Cat might play volleyball with you if that's what your into. Other activities also include: splashing in the water in slow motion like you're in a film flirting with each other,  breaking watermelons on a beach (that's a thing), building sandcastles, and more. Beach Cat will not sun bathe with you, but Beach Cat will always remind you to wear SPF.",
     image: "assets/results/result4.gif",
     tweetThat: "pic.twitter.com/gLORSsBRrH"
   },
